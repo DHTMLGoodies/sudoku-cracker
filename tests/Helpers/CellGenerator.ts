@@ -5,7 +5,7 @@ export class CellGenerator {
         const cells: ICell[] = [];
 
         const candidates = Array.from({ length: rangeSize }, (value, index) => {
-            return `${index + 1}`;
+            return index + 1;
         });
 
         for (let i = 0; i < numberOfCells; i++) {

@@ -64,14 +64,14 @@ export type SudokuRuleSets =
 
 export interface ICell {
     cell: string;
-    value: string | undefined;
-    candidates: string[];
+    value: number | undefined;
+    candidates: number[];
 }
 export interface ISudokuModel {
     gridSize: string;
     presets: {
         cell: string;
-        value: string;
+        value: number;
     }[];
     rules: SudokuRuleSets[];
 }
