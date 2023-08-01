@@ -1,6 +1,5 @@
 export interface IRuleNormalSudoku {
     type: "normal";
-
 }
 
 export interface IRuleKillerCage {
@@ -19,16 +18,60 @@ export interface IRuleGermanWhisper {
     cells: string[];
 }
 
-export interface IRule
+export interface IRuleSum5 {
+    type: "sum5";
+    cell1: string;
+    cell2: string;
+}
 
-export type SudokuRuleSets = IRuleNormalSudoku | IRuleKillerCage | IRuleRenaban | IRuleGermanWhisper;
+export interface IRuleSum10 {
+    type: "sum10";
+    cell1: string;
+    cell2: string;
+}
 
+export interface IRuleConsecutive {
+    type: "consecutive";
+    cell1: string;
+    cell2: string;
+}
+
+export interface IRuleDouble {
+    type: "double";
+    cell1: string;
+    cell2: string;
+}
+
+export interface IRuleKnightsMove {
+    type: "knightsmove";
+}
+
+export interface IRuleKingsMove {
+    type: "kingsmove";
+}
+
+export type SudokuRuleSets =
+    | IRuleNormalSudoku
+    | IRuleKillerCage
+    | IRuleRenban
+    | IRuleGermanWhisper
+    | IRuleSum5
+    | IRuleSum10
+    | IRuleConsecutive
+    | IRuleDouble
+    | IRuleKnightsMove
+    | IRuleKingsMove;
+
+export interface ICell {
+    cell: string;
+    value: string | undefined;
+    candidates: string[];
+}
 export interface ISudokuModel {
     gridSize: string;
     presets: {
         cell: string;
-        value: number;
+        value: string;
     }[];
-    rules: 
-
+    rules: SudokuRuleSets[];
 }
