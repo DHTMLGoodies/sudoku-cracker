@@ -1,0 +1,16 @@
+{
+    "size": "9x9",
+    "presets": [
+        {
+            "cell": "r1c1",
+            "value": 5
+        }
+    ],
+    "rules": [
+        {
+            "type": "KillerCage",
+            "sum": 15,
+            "cells": ["r1c1", "r1c2", "r1c3", "r1c4", "r1c5"]
+        }
+    ]
+}
