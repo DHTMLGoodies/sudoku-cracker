@@ -1,5 +1,9 @@
 export interface IRuleNormalSudoku {
     type: "normal";
+    gridSize: {
+        c: number;
+        r: number;
+    };
 }
 
 export interface IRuleKillerCage {
